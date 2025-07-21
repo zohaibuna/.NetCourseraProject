@@ -1,0 +1,63 @@
+### Get all users (valid token)
+GET http://localhost:5120/users
+Authorization: Bearer demo-token
+
+### Get all users (invalid token)
+GET http://localhost:5120/users
+Authorization: Bearer invalid-token
+
+### Get user by ID (valid token)
+GET http://localhost:5120/users/1
+Authorization: Bearer demo-token
+
+### Get user by ID (invalid token)
+GET http://localhost:5120/users/1
+Authorization: Bearer invalid-token
+
+### Add new user (valid token)
+POST http://localhost:5120/users
+Authorization: Bearer demo-token
+Content-Type: application/json
+
+{
+  "name": "Charlie",
+  "email": "charlie@example.com"
+}
+
+### Add new user (invalid token)
+POST http://localhost:5120/users
+Authorization: Bearer invalid-token
+Content-Type: application/json
+
+{
+  "name": "Charlie",
+  "email": "charlie@example.com"
+}
+
+### Update user (valid token)
+PUT http://localhost:5120/users/1
+Authorization: Bearer demo-token
+Content-Type: application/json
+
+{
+  "name": "Alice Updated",
+  "email": "alice.updated@example.com"
+}
+
+### Update user (invalid token)
+PUT http://localhost:5120/users/1
+Authorization: Bearer invalid-token
+Content-Type: application/json
+
+{
+  "name": "Alice Updated",
+  "email": "alice.updated@example.com"
+}
+
+### Delete user (valid token)
+DELETE http://localhost:5120/users/1
+Authorization: Bearer demo-token
+
+### Delete user (invalid token)
+DELETE http://localhost:5120/users/1
+Authorization: Bearer invalid-token
